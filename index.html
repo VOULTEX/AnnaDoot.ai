@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AnnaDoot AI - Surplus Food Redistribution Agent</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body><div class="w">
+<h1>Anna<span>Doot</span> AI</h1>
+<p class="tag">An agentic AI that turns a surplus-food post into a completed pickup: intake, safety check, NGO matching, dispatch and impact tracking. SDG 2 - Zero Hunger.</p>
+<nav id="nav"><button class="on" data-t="t1">Donate food</button><button data-t="t2">Impact dashboard</button><button data-t="t3">NGO network</button></nav>
+
+<section id="t1"><div class="g2">
+<div class="c"><h2>Post surplus food</h2>
+<label>Donor name</label><input id="dn" value="Shree Banquet Hall">
+<label>Food details</label><textarea id="fd" rows="3">Veg biryani, dal and paneer curry left after a wedding</textarea>
+<div class="r2"><div><label>Portions</label><input id="pq" type="number" min="1" value="80"></div><div><label>Cooked hours ago</label><input id="ch" type="number" min="0" step="0.5" value="1.5"></div></div>
+<label>Pickup zone</label><select id="zn"></select>
+<button class="ex" id="ex">Try a non-veg example</button> <button class="ex" id="ex2">Try an unsafe (old) example</button>
+<button class="btn" id="go">Run AnnaDoot agents</button></div>
+<div class="c"><h2>Agent pipeline</h2><div id="steps"></div><div id="out"></div></div></div></section>
+
+<section id="t2" hidden><div class="stats" id="stats"></div><div class="g2"><div class="c"><h2>Meals by NGO</h2><div id="bars"></div></div><div class="c scroll"><h2>Donation log</h2><div id="log"></div></div></div>
+<p class="tag" style="font-size:13px">First 3 rows are demo seed data. Meals = portions; kg and CO2 are rough estimates (0.4 kg per portion, 2.5 kg CO2e per kg food).</p></section>
+
+<section id="t3" hidden><div class="g2"><div class="c"><h2>Partner NGOs</h2><div id="ngos"></div></div><div class="c"><h2>Service map (demo grid)</h2><div class="map" id="map"></div></div></div></section>
+<footer style="margin-top:40px;color:var(--mute);font-size:13px">AnnaDoot AI &middot; Aaditya Singh Chauhan &middot; IBM SkillsBuild for Academia, Masterclass 5 &middot; SDG 2 Zero Hunger</footer></div>
+<script src="app.js"></script></body></html>
